@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="Œuvres de Daniela Quilici, artiste plasticienne.">
+  <title>Œuvres — Daniela Quilici</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Daniela Quilici, accueil">DANIELA QUILICI</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-principale">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
+    <nav class="site-nav" id="navigation-principale" aria-label="Navigation principale">
+      <a href="./" aria-current="page">Œuvres</a>
+      <a href="../recherche/">Recherche</a>
+      <a href="../a-propos/">À propos</a>
+      <a href="../expositions/">Expositions</a>
+      <a href="../residences/">Résidences</a>
+      <a href="../actualites/">Actualités</a>
+      <a href="../contact/">Contact</a>
+    </nav>
+  </header>
+  <main class="section-page works-page" id="contenu">
+    <header class="works-heading">
+      <p class="section-index">01 / Portfolio</p>
+      <h1>Œuvres</h1>
+      <p class="page-intro">Une sélection d’œuvres sur papier, de peintures et de céramiques.</p>
+    </header>
+
+    <nav class="works-filters" aria-label="Filtrer les œuvres">
+      <button type="button" data-work-filter="all" aria-pressed="true">Toutes</button>
+      <button type="button" data-work-filter="painting" aria-pressed="false">Peinture</button>
+      <button type="button" data-work-filter="paper" aria-pressed="false">Œuvres sur papier</button>
+      <button type="button" data-work-filter="ceramic" aria-pressed="false">Céramique</button>
+    </nav>
+
+    <div class="works-collection" aria-live="polite">
+      <section class="work-category" data-work-category="painting" aria-labelledby="works-painting">
+        <div class="work-category-heading">
+          <p class="section-index">01</p>
+          <h2 id="works-painting">Peinture</h2>
+        </div>
+        <div class="works-grid">
+          <article class="work-card" data-work-card data-category="painting">
+            <button class="work-open" type="button" data-title="Corteza" data-year="2026" data-medium="Pigment acrylique dilué, stick à l’huile et fusain sur toile" data-dimensions="174 × 174 cm" data-image="../images/oeuvres/corteza.jpg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/corteza.jpg" alt="" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Corteza</span><span class="work-year">2026</span></span>
+            </button>
+          </article>
+          <article class="work-card work-card-offset" data-work-card data-category="painting">
+            <button class="work-open" type="button" data-title="Sans titre" data-year="2026" data-medium="Pigment acrylique dilué, stick à l’huile et fusain sur toile" data-dimensions="174 × 174 cm" data-image="../images/oeuvres/sans-titre.jpg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/sans-titre.jpg" alt="" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Sans titre</span><span class="work-year">2026</span></span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-category" data-work-category="paper" aria-labelledby="works-paper">
+        <div class="work-category-heading">
+          <p class="section-index">02</p>
+          <h2 id="works-paper">Œuvres sur papier</h2>
+        </div>
+        <div class="works-grid">
+          <article class="work-card" data-work-card data-category="paper">
+            <button class="work-open" type="button" data-title="Terrains de l’inconscient II" data-year="2025" data-medium="Encre, pigments, fusain, pastel sur papier" data-dimensions="140 × 150 cm" data-image="../images/oeuvres/terrains-de-l-inconscient-II.jpeg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/terrains-de-l-inconscient-II.jpeg" alt="" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Terrains de l’inconscient II</span><span class="work-year">2025</span></span>
+            </button>
+          </article>
+          <article class="work-card work-card-offset" data-work-card data-category="paper">
+            <button class="work-open" type="button" data-title="Mar de humo" data-year="2025" data-medium="Encre, pigments, huile, fusain, pastel sur papier" data-dimensions="200 × 120 cm" data-image="../images/oeuvres/mar-de-humo.jpg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/mar-de-humo.jpg" alt="" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Mar de humo</span><span class="work-year">2025</span></span>
+            </button>
+          </article>
+          <article class="work-card" data-work-card data-category="paper">
+            <button class="work-open" type="button" data-title="Caos II" data-year="2026" data-medium="Acrylique, pigment, encre, fusain, crayon aquarelle sur papier" data-dimensions="200 × 100 cm" data-image="../images/oeuvres/caos-II.jpg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/caos-II.jpg" alt="" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Caos II</span><span class="work-year">2026</span></span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="work-category" data-work-category="ceramic" aria-labelledby="works-ceramic">
+        <div class="work-category-heading">
+          <p class="section-index">03</p>
+          <h2 id="works-ceramic">Céramique</h2>
+        </div>
+        <div class="works-grid">
+          <article class="work-card" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Receptacle 1" data-year="" data-medium="Pièce unique · à la frontière entre sculpture et objet fonctionnel" data-medium-label="Description" data-dimensions="42 × 26 × 8 cm" data-image="../images/oeuvres/ceramiques/receptacles 1.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/receptacles 1.png" alt="Céramique — Receptacle 1" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Receptacle 1</span><span class="work-year">Pièce unique · à la frontière entre sculpture et objet fonctionnel<br>42 × 26 × 8 cm</span></span>
+            </button>
+          </article>
+          <article class="work-card work-card-offset" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Receptacle 2" data-year="" data-medium="Pièce unique · à la frontière entre sculpture et objet fonctionnel" data-medium-label="Description" data-dimensions="32 × 33 × 10 cm" data-image="../images/oeuvres/ceramiques/receptacles 2.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/receptacles 2.png" alt="Céramique — Receptacle 2" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Receptacle 2</span><span class="work-year">Pièce unique · à la frontière entre sculpture et objet fonctionnel<br>32 × 33 × 10 cm</span></span>
+            </button>
+          </article>
+          <article class="work-card" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Receptacle 3" data-year="" data-medium="Pièce unique · à la frontière entre sculpture et objet fonctionnel" data-medium-label="Description" data-dimensions="37 × 33 × 15 cm" data-image="../images/oeuvres/ceramiques/receptacles 3.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/receptacles 3.png" alt="Céramique — Receptacle 3" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Receptacle 3</span><span class="work-year">Pièce unique · à la frontière entre sculpture et objet fonctionnel<br>37 × 33 × 15 cm</span></span>
+            </button>
+          </article>
+          <article class="work-card" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Receptacle 5" data-year="" data-medium="Pièce unique · à la frontière entre sculpture et objet fonctionnel" data-medium-label="Description" data-dimensions="38 × 22 × 7 cm" data-image="../images/oeuvres/ceramiques/receptacles 5.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/receptacles 5.png" alt="Céramique — Receptacle 5" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Receptacle 5</span><span class="work-year">Pièce unique · à la frontière entre sculpture et objet fonctionnel<br>38 × 22 × 7 cm</span></span>
+            </button>
+          </article>
+          <article class="work-card" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Sculpture B" data-year="" data-medium="" data-dimensions="30 × 20 × 10 cm" data-image="../images/oeuvres/ceramiques/sculpture 2.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/sculpture 2.png" alt="Sculpture B en céramique" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Sculpture B</span><span class="work-year">30 × 20 × 10 cm</span></span>
+            </button>
+          </article>
+          <article class="work-card" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Receptacle 6" data-year="" data-medium="Pièce unique · à la frontière entre sculpture et objet fonctionnel" data-medium-label="Description" data-dimensions="42 × 32 × 10 cm" data-image="../images/oeuvres/ceramiques/sculpture 3.png">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/sculpture 3.png" alt="Céramique — Receptacle 6" loading="lazy"></span>
+              <span class="work-caption work-caption-receptacle6"><span class="work-title">Receptacle 6</span><span class="work-year">42 × 32 × 10 cm</span><span class="work-caption-description">Pièce unique · à la frontière entre sculpture et objet fonctionnel</span></span>
+            </button>
+          </article>
+          <article class="work-card work-card-offset" data-work-card data-category="ceramic">
+            <button class="work-open" type="button" data-title="Sculpture A" data-year="2026" data-medium="Pièce unique · sculpture en céramique" data-medium-label="Description" data-dimensions="23 × 15 × 10 cm" data-image="../images/oeuvres/ceramiques/sculpture 5.jpg">
+              <span class="work-image work-image-natural"><img src="../images/oeuvres/ceramiques/sculpture 5.jpg" alt="Sculpture A en céramique" loading="lazy"></span>
+              <span class="work-caption"><span class="work-title">Sculpture A</span><span class="work-year">2026<br>Pièce unique · sculpture en céramique<br>23 × 15 × 10 cm</span></span>
+            </button>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <dialog class="work-dialog" aria-labelledby="work-dialog-title">
+      <form method="dialog" class="work-dialog-close-form">
+        <button class="work-dialog-close" aria-label="Fermer">×</button>
+      </form>
+      <div class="work-dialog-layout">
+        <div class="work-dialog-image"></div>
+        <div class="work-dialog-information">
+          <h2 id="work-dialog-title"></h2>
+          <p class="work-dialog-year"></p>
+          <dl>
+            <div><dt data-work-medium-label>Technique</dt><dd class="work-dialog-medium"></dd></div>
+            <div><dt>Dimensions</dt><dd class="work-dialog-dimensions"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../">Daniela Quilici</a>
+    <p>Artiste plasticienne<br>Cachan, France</p>
+    <div class="footer-contact" aria-label="Coordonnées à renseigner">
+      <span>Instagram <small>lien à ajouter</small></span>
+      <span>Email <small>adresse à ajouter</small></span>
+    </div>
+    <p class="footer-language">FR</p>
+  </footer>
+</body>
+</html>
