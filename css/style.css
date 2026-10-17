@@ -521,7 +521,7 @@ button:focus-visible {
 
 .artmonth-logo {
   display: block;
-  width: min(100%, 12.5rem);
+  width: min(100%, 20rem);
   height: auto;
   margin: 0 0 1rem;
 }
@@ -1315,4 +1315,146 @@ button:focus-visible {
 .selected-works .selected-work-image img {
   height: auto;
   object-fit: contain;
+}
+
+.footer-newsletter {
+  width: 100%;
+  padding: clamp(3rem, 5.5vw, 5rem) var(--page-gutter);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.footer-newsletter .sib-form {
+  width: 100%;
+  text-align: left !important;
+  background: transparent !important;
+}
+
+.footer-newsletter .sib-form-container {
+  width: 100%;
+}
+
+.footer-newsletter .sib-form-message-panel {
+  width: 100%;
+  max-width: 48rem !important;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  font-family: var(--sans) !important;
+}
+
+.footer-newsletter #sib-container {
+  width: 100%;
+  max-width: 48rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.footer-newsletter #sib-container .sib-form-block {
+  color: var(--ink) !important;
+  font-family: var(--sans) !important;
+  text-align: left !important;
+}
+
+.footer-newsletter #sib-container form > div:first-child .sib-form-block {
+  color: var(--ink) !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(1.6rem, 2.4vw, 2rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.2;
+}
+
+.footer-newsletter #sib-container form > div:nth-child(2) .sib-form-block {
+  font-size: 0.84rem !important;
+}
+
+.footer-newsletter #sib-container p {
+  margin: 0;
+}
+
+.footer-newsletter #sib-container .sib-text-form-block {
+  max-width: 42rem;
+  font-size: 0.84rem;
+}
+
+.footer-newsletter #sib-container .entry__label,
+.footer-newsletter #sib-container .entry__choice span:last-child,
+.footer-newsletter #sib-container .entry__specification {
+  color: var(--ink) !important;
+  font-family: var(--sans) !important;
+}
+
+.footer-newsletter #sib-container .entry__label {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.footer-newsletter #sib-container .entry__choice span:last-child {
+  font-size: 0.78rem !important;
+}
+
+.footer-newsletter #sib-container .entry__specification {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--muted) !important;
+  font-size: 0.7rem !important;
+}
+
+.footer-newsletter #sib-container a {
+  color: var(--accent) !important;
+}
+
+.footer-newsletter #sib-container input[type="text"]:not(.input--hidden) {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.footer-newsletter #sib-container input[type="text"]:not(.input--hidden)::placeholder {
+  color: var(--muted) !important;
+  font: inherit !important;
+}
+
+.footer-newsletter #sib-container input[type="text"]:not(.input--hidden):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.footer-newsletter #sib-container .sib-form-block__button {
+  padding: 0.75rem 1.3rem;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--accent) !important;
+  color: var(--paper) !important;
+  font-family: var(--sans) !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.08em;
+  text-align: center !important;
+}
+
+@media (max-width: 700px) {
+  .footer-newsletter {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-newsletter #sib-container,
+  .footer-newsletter .sib-form-message-panel {
+    max-width: none !important;
+  }
 }
