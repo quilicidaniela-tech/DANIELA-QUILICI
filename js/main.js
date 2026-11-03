@@ -92,3 +92,62 @@ if (worksCollection && workFilters && workDialog) {
     dialogLayout.classList.remove('is-text-only');
   });
 }
+
+const exhibitionGalleryToggle = document.querySelector('.exhibition-gallery-toggle');
+const exhibitionGallery = document.querySelector('#transparences-gallery');
+const exhibitionPhotoViewer = document.querySelector('.exhibition-photo-viewer');
+
+if (exhibitionGalleryToggle && exhibitionGallery && exhibitionPhotoViewer) {
+  const photoButtons = [...exhibitionGallery.querySelectorAll('.exhibition-photo-open')];
+  const viewerImage = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-image');
+  const viewerCount = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-count');
+  const viewerClose = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-close');
+  const viewerPrevious = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-previous');
+  const viewerNext = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-next');
+  let currentPhotoIndex = 0;
+  let returnFocusTarget = null;
+
+  exhibitionGalleryToggle.addEventListener('click', () => {
+    const isExpanded = exhibitionGalleryToggle.getAttribute('aria-expanded') === 'true';
+    exhibitionGalleryToggle.setAttribute('aria-expanded', String(!isExpanded));
+    exhibitionGalleryToggle.textContent = isExpanded ? 'Voir les 9 photographies' : 'Masquer les photographies';
+    exhibitionGallery.hidden = isExpanded;
+  });
+
+  const showPhoto = (index) => {
+    currentPhotoIndex = (index + photoButtons.length) % photoButtons.length;
+    const image = photoButtons[currentPhotoIndex].querySelector('img');
+    viewerImage.src = image.src;
+    viewerImage.alt = image.alt;
+    viewerCount.textContent = `Photographie ${currentPhotoIndex + 1} sur ${photoButtons.length}`;
+  };
+
+  exhibitionGallery.addEventListener('click', (event) => {
+    const photoButton = event.target.closest('.exhibition-photo-open');
+    if (!photoButton) return;
+
+    returnFocusTarget = photoButton;
+    showPhoto(photoButtons.indexOf(photoButton));
+    exhibitionPhotoViewer.showModal();
+    viewerClose.focus();
+  });
+
+  viewerClose.addEventListener('click', () => exhibitionPhotoViewer.close());
+  viewerPrevious.addEventListener('click', () => showPhoto(currentPhotoIndex - 1));
+  viewerNext.addEventListener('click', () => showPhoto(currentPhotoIndex + 1));
+
+  exhibitionPhotoViewer.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      showPhoto(currentPhotoIndex - 1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      showPhoto(currentPhotoIndex + 1);
+    }
+  });
+
+  exhibitionPhotoViewer.addEventListener('close', () => {
+    if (returnFocusTarget?.isConnected) returnFocusTarget.focus();
+    returnFocusTarget = null;
+  });
+}

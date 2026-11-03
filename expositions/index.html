@@ -51,6 +51,56 @@
             <div class="exhibition-details">
               <h3>TRANSPARENCES</h3>
               <p>Maison des Arts de Châtillon — Châtillon, France</p>
+              <button class="exhibition-gallery-toggle" type="button" aria-expanded="false" aria-controls="transparences-gallery">Voir les 9 photographies</button>
+            </div>
+            <div class="exhibition-gallery" id="transparences-gallery" hidden>
+              <div class="exhibition-gallery-grid">
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 1">
+                    <img src="../images/expositions/transparences-2024/1.JPG" alt="Photographie 1 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 2">
+                    <img src="../images/expositions/transparences-2024/2.JPG" alt="Photographie 2 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 3">
+                    <img src="../images/expositions/transparences-2024/3.PNG" alt="Photographie 3 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 4">
+                    <img src="../images/expositions/transparences-2024/4.PNG" alt="Photographie 4 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 5">
+                    <img src="../images/expositions/transparences-2024/5.PNG" alt="Photographie 5 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 6">
+                    <img src="../images/expositions/transparences-2024/6.PNG" alt="Photographie 6 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 7">
+                    <img src="../images/expositions/transparences-2024/7.PNG" alt="Photographie 7 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 8">
+                    <img src="../images/expositions/transparences-2024/8.PNG" alt="Photographie 8 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure>
+                  <button class="exhibition-photo-open" type="button" aria-label="Agrandir la photographie 9">
+                    <img src="../images/expositions/transparences-2024/9.PNG" alt="Photographie 9 de l’exposition TRANSPARENCES (2024)." loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
             </div>
           </li>
           <li class="exhibition-entry">
@@ -112,6 +162,19 @@
         </ol>
       </div>
     </section>
+
+    <dialog class="exhibition-photo-viewer" aria-labelledby="exhibition-photo-viewer-title">
+      <div class="exhibition-photo-viewer-header">
+        <h2 id="exhibition-photo-viewer-title">TRANSPARENCES</h2>
+        <p class="exhibition-photo-viewer-count" aria-live="polite"></p>
+        <button class="exhibition-photo-viewer-close" type="button" aria-label="Fermer la visionneuse" autofocus>×</button>
+      </div>
+      <div class="exhibition-photo-viewer-stage">
+        <button class="exhibition-photo-viewer-previous" type="button" aria-label="Photographie précédente">←</button>
+        <img class="exhibition-photo-viewer-image" alt="">
+        <button class="exhibition-photo-viewer-next" type="button" aria-label="Photographie suivante">→</button>
+      </div>
+    </dialog>
 
     <section class="about-section" aria-labelledby="titre-expositions-collectives" style="padding-top: clamp(4rem, 8vw, 7rem);">
       <div class="about-section-label">
