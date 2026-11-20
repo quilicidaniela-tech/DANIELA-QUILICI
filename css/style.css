@@ -1462,6 +1462,63 @@ button:focus-visible {
   object-fit: contain;
 }
 
+@media (max-width: 767px) {
+  .work-category {
+    padding-top: clamp(2.5rem, 7vw, 3.5rem);
+  }
+
+  .works-grid {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: clamp(2rem, 6vw, 3rem);
+  }
+
+  .work-card:nth-child(n) {
+    grid-column: 1;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .work-open {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .work-caption {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .work-caption > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .work-caption .work-year {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .work-caption {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .work-caption > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .work-caption .work-year {
+    flex: 0 1 auto;
+  }
+}
+
 .work-dialog-image:has(img) {
   min-height: 0;
   aspect-ratio: auto;
