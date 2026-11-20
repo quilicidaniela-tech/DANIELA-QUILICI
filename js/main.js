@@ -27,6 +27,21 @@ const workFilters = document.querySelector('.works-filters');
 const workDialog = document.querySelector('.work-dialog');
 
 if (worksCollection && workFilters && workDialog) {
+  const galleryMessages = {
+    fr: {
+      mediumLabel: 'Technique',
+      imagePlaceholder: 'IMAGE À AJOUTER / ASSOCIATION À CONFIRMER'
+    },
+    es: {
+      mediumLabel: 'Técnica',
+      imagePlaceholder: 'IMAGEN POR AÑADIR / ASOCIACIÓN POR CONFIRMAR'
+    },
+    en: {
+      mediumLabel: 'Medium',
+      imagePlaceholder: 'IMAGE TO BE ADDED / ASSOCIATION TO BE CONFIRMED'
+    }
+  };
+  const messages = galleryMessages[document.documentElement.lang] || galleryMessages.fr;
   const cards = [...worksCollection.querySelectorAll('[data-work-card]')];
   const categories = [...worksCollection.querySelectorAll('[data-work-category]')];
   const dialogImage = workDialog.querySelector('.work-dialog-image');
@@ -63,7 +78,7 @@ if (worksCollection && workFilters && workDialog) {
     dialogYear.textContent = trigger.dataset.year;
     dialogYear.hidden = !trigger.dataset.year;
     dialogMedium.textContent = trigger.dataset.medium;
-    dialogMediumLabel.textContent = trigger.dataset.mediumLabel || 'Technique';
+    dialogMediumLabel.textContent = trigger.dataset.mediumLabel || messages.mediumLabel;
     dialogMedium.parentElement.hidden = !trigger.dataset.medium;
     dialogDimensions.textContent = trigger.dataset.dimensions;
     dialogDimensions.parentElement.hidden = !trigger.dataset.dimensions;
@@ -79,7 +94,7 @@ if (worksCollection && workFilters && workDialog) {
     } else if (trigger.dataset.textOnly !== 'true') {
       dialogImage.classList.add('work-image-placeholder');
       const placeholder = document.createElement('span');
-      placeholder.textContent = 'IMAGE À AJOUTER / ASSOCIATION À CONFIRMER';
+      placeholder.textContent = messages.imagePlaceholder;
       dialogImage.append(placeholder);
     }
 
@@ -98,6 +113,24 @@ const exhibitionGallery = document.querySelector('#transparences-gallery');
 const exhibitionPhotoViewer = document.querySelector('.exhibition-photo-viewer');
 
 if (exhibitionGalleryToggle && exhibitionGallery && exhibitionPhotoViewer) {
+  const exhibitionMessages = {
+    fr: {
+      showPhotos: 'Voir les 9 photographies',
+      hidePhotos: 'Masquer les photographies',
+      photoCount: (current, total) => `Photographie ${current} sur ${total}`
+    },
+    es: {
+      showPhotos: 'Ver las 9 fotografías',
+      hidePhotos: 'Ocultar las fotografías',
+      photoCount: (current, total) => `Fotografía ${current} de ${total}`
+    },
+    en: {
+      showPhotos: 'View the 9 photographs',
+      hidePhotos: 'Hide photographs',
+      photoCount: (current, total) => `Photograph ${current} of ${total}`
+    }
+  };
+  const messages = exhibitionMessages[document.documentElement.lang] || exhibitionMessages.fr;
   const photoButtons = [...exhibitionGallery.querySelectorAll('.exhibition-photo-open')];
   const viewerImage = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-image');
   const viewerCount = exhibitionPhotoViewer.querySelector('.exhibition-photo-viewer-count');
@@ -110,7 +143,7 @@ if (exhibitionGalleryToggle && exhibitionGallery && exhibitionPhotoViewer) {
   exhibitionGalleryToggle.addEventListener('click', () => {
     const isExpanded = exhibitionGalleryToggle.getAttribute('aria-expanded') === 'true';
     exhibitionGalleryToggle.setAttribute('aria-expanded', String(!isExpanded));
-    exhibitionGalleryToggle.textContent = isExpanded ? 'Voir les 9 photographies' : 'Masquer les photographies';
+    exhibitionGalleryToggle.textContent = isExpanded ? messages.showPhotos : messages.hidePhotos;
     exhibitionGallery.hidden = isExpanded;
   });
 
@@ -119,7 +152,7 @@ if (exhibitionGalleryToggle && exhibitionGallery && exhibitionPhotoViewer) {
     const image = photoButtons[currentPhotoIndex].querySelector('img');
     viewerImage.src = image.src;
     viewerImage.alt = image.alt;
-    viewerCount.textContent = `Photographie ${currentPhotoIndex + 1} sur ${photoButtons.length}`;
+    viewerCount.textContent = messages.photoCount(currentPhotoIndex + 1, photoButtons.length);
   };
 
   exhibitionGallery.addEventListener('click', (event) => {

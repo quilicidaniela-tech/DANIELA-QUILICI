@@ -342,6 +342,10 @@ button:focus-visible {
   border-top: 0;
 }
 
+.about-presentation h1#titre-presentation {
+  margin-bottom: 1.25rem;
+}
+
 .about-section-label .section-index {
   margin: 0;
   padding-top: 0.75rem;
@@ -435,7 +439,7 @@ button:focus-visible {
   display: block;
   width: min(100%, 20rem);
   height: auto;
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
 }
 
 .exhibition-details h3 {
@@ -716,6 +720,73 @@ button:focus-visible {
 .footer-language {
   color: var(--muted);
   font-size: 0.67rem;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin: 0;
+  padding: 0.15rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.language-switcher::before {
+  flex: 0 0 1rem;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.25rem;
+  background-color: currentColor;
+  content: "";
+  pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.language-switcher a {
+  display: inline-flex;
+  min-width: 2rem;
+  min-height: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.35rem;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.language-switcher a:hover {
+  background: var(--art-paper);
+  color: var(--ink);
+}
+
+.language-switcher a[aria-current="page"] {
+  background: var(--art-paper);
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.site-nav .language-switcher {
+  flex: 0 0 auto;
+  margin-left: 0;
+}
+
+.site-nav .language-switcher a:hover::after,
+.site-nav .language-switcher a[aria-current="page"]::after {
+  content: none;
+}
+
+.translation-pending {
+  color: var(--accent);
+  font-style: italic;
 }
 
 @media (max-width: 1000px) {
