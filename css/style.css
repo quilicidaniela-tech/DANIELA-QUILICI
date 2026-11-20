@@ -1519,6 +1519,48 @@ button:focus-visible {
   }
 }
 
+@media (max-width: 700px) {
+  .work-dialog {
+    margin-block: max(0.5rem, env(safe-area-inset-top, 0px)) max(0.5rem, env(safe-area-inset-bottom, 0px));
+    max-height: min(88vh, calc(100vh - max(0.5rem, env(safe-area-inset-top, 0px)) - max(0.5rem, env(safe-area-inset-bottom, 0px))));
+    max-height: min(88dvh, calc(100dvh - max(0.5rem, env(safe-area-inset-top, 0px)) - max(0.5rem, env(safe-area-inset-bottom, 0px))));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .work-dialog-close-form {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -2.5rem;
+    pointer-events: none;
+  }
+
+  .work-dialog-close {
+    flex: 0 0 auto;
+    pointer-events: auto;
+  }
+
+  .work-dialog-layout {
+    padding-top: 2.75rem;
+  }
+
+  .work-dialog-image:has(img) {
+    max-height: min(40vh, 18rem);
+    max-height: min(40dvh, 18rem);
+    margin-top: 0;
+  }
+
+  .work-dialog-image:has(img) img {
+    max-height: min(40vh, 18rem);
+    max-height: min(40dvh, 18rem);
+    object-fit: contain;
+  }
+}
+
 .work-dialog-image:has(img) {
   min-height: 0;
   aspect-ratio: auto;
